@@ -1,140 +1,202 @@
-,<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/ac89bdf621.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 
-    <style>
-        body{
+
+   <style>
+    .slider{
+      position: relative;
+      width: 700px;
+      height: 400px;
+      border: 3px solid rgb(255, 252, 252);
+      margin: auto;
+      overflow: hidden;
+    }
+
+
+    .slider-content{
+      position: absolute;
+      width: 500%;
+      left: 0%;
+      animation: slide 20s infinite;
+
+    }
+
+    .slider-item{
+      width: 20%;
+      float: left;
+
+    }
+
+    @keyframes slide{
+
+       0%{
+        transform: translateX(0px);
+       }
+       10%{
+        transform: translateX(-700px);
+       }
+       20%{
+        transform: translateX(-700px);
+       }
+       30%{
+        transform: translateX(-1400px);
+       }
+       40%{
+        transform: translateX(-1400px);
+       }
+       50%{
+        transform: translateX(-2100px);
+       }
+       60%{
+        transform: translateX(-2100px);
+       }
+       70%{
+        transform: translateX(-2800px);
+       }
+       80%{
+        transform: translateX(-2800px);
+       }
+       90%{
+        transform: translateX(0px);
+       }
+  
+      }
+      body{
             scroll-behavior: smooth;
         }
-      
-      .menu {
-       
-        
-            margin:0 auto;
-            width:1000px; 
-            height:100px;
-            text-decoration:none;
-            font: size 510PX;
-            font-family:Georgia, 'Times New Roman', Times, serif;
-            text-align:center;
-            margin-top:10px;
-            margin-left:320px;  
-            position: sticky ;
-            top: 0px;       
-            z-index: 1000;
-            }
-              .menu ul li a {
-	      display:block;
-	      background:black;
-	      color:#fff;
-	      font-size:12px;
-	      padding:20px 20px;
-	      text-decoration:none;
-	      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
-                     }
-       
-           
-        ul {
-           list-style-type: none;
-            margin: 10;
-           padding: 10;
-           overflow: hidden;
-           background-color:;
-        }
+    .navbar{
+      position: fixed;
+      text-align:center;
+      text-align:justify;
+      margin-left: 37%;
+       }
+.menu{
+  text-align: center;
+  
+}
 
-       li {
-           display:inline-block;
-         }  
 
-        li a {
-           display: block;
-           color: rgb(5, 8, 193);
-           text-align: center;
-           padding: 10px 10px;
-           text-decoration: none;
-            }         
-
-        li a:hover{
-           background-color:#f39c12; 
-                  }
-
-        ul li ul {
-          background-color:#2c3e50;
-          display:none;
-          position:absolute;
-           width:100px
-            }
-
-        ul li:hover ul{
-           display:block;
-            }
-        li ul li {
-           display:block; 
-           }
-           
+.slider{
+  margin-top: 110px;
+  
+}
+@media screen and (max-width:700px) {
+ #menu{
+    width: 100%;
+ }
+ #hakkımda{
+    width: 100%;
+ }
+ #özgeçmiş{
+    width: 100%;
+ }
+ #resim{
+    width: 100%;
+ }
     
+}
 
-    </style>
+   </style>
+    
 </head>
 <body   >
 
 
        <a name="AnaSayfa"></a>
-       <div class="menu"  >
-        
-          <ul>
-            <li><a href="#AnaSayfa">Ana sayfa</a></li>
-      
-            <li><a href="#hakkımda">Hakkımda </a></li>
-      
-            <li><a href="okul.html">Okullarım</a></li>
-      
-            <li><a href="#Özgeçmiş">Özgeçmiş</a></li>
-      
-            <li><a href="#iletişim">İletişim</a></li>
-      </ul>
-    </div>
+       <div id="menu">
+      <nav class="navbar navbar-expand-md bg-inhurt navbark-dark justify-content-center">
+        <img id="resim" class="mr-3" src="img/logo1.jpeg.gif" style="width: 50px; heigt: 10px;"> 
+       
+        <ul class="navbar-nav">
+          <li class="nav-item ">
+            <a href="#AnaSayfa" class="nav-link"> Ana Sayfa</a>
+          </li>
+          <li class="nav-item ">
+            <a href="#hakkımda" class="nav-link"> Hakkımda</a>
+          </li>
+          <li class="nav-item ">
+            <a href="#özgeçmiş" class="nav-link"> Özgeçmiş</a>
+          </li>
+          <li class="nav-item ">
+            <a href="#iletişim" class="nav-link"> İletişim</a>
+          </li>
+          <img class="margin-left-5" src="img/logo1.jpeg.gif" style="width: 50px; heigt: 10px;">
+
+        </ul>
+      </div>
+       
+      </nav>
     <div style="height: 600px;">
-        <img src="img/logo1.jpg" style="position: absolute; right: 20px; top: 20px;" alt="">
-         <img src="img/1.jpeg" style="margin-left: 600px; height: 600px;" alt="">
+        <div class="slider">
+          <div class="slider-content">
+            <div class="slider-item" >
+              <img src="img/inönü.jpg"style="width700px; height:400px;">
+            </div>
+            <div class="slider-item" >
+              <img src="img/slide 2.jpeg.jpeg" style="width:700px; height:400px;">
+            </div>
+            <div class="slider-item" >
+              <img src="img/slide 3.jpeg.jpeg" style="width:700px; height:400px;">
+            </div>
+            <div class="slider-item" >
+              <img src="img/slide 4.jpeg.jpeg" style="width:700px; height:400px;">
+            </div>
+           
+            <div class="slider-item" >
+              <img src="img/slide 5.jpeg.jpeg" style="width:700px; height:400px;">
+            </div>
+          </div>
+        </div>
+        <p style="position: absolute; left: 650px; top: 530px; font-size: 19px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">
+          slider animasyonu
+        </p>
+   
+         
     </div>     
 
-    <a name="Hakkımda"></a>
-
-    <div style="margin-top: 500px; height: 400px;" font-size="25px">
+    <a id="hakkımda" name="Hakkımda"></a>
+    <a  id="cv" href="img/CV.pdf.pdf" download > 
+      <button  type="button "  >   CV  </button>
+    </a>
+    <div  style="margin-top: 500px; height: 400px;" font-size="25px" font face="tahoma">
        
-        <img src="img/inönü.jpg"  style="position: absolute; top: 900px; left: 50px; height: 350px;">
-        
+        <img id="resim" class="m-1 rounded" src="img/inönü.jpg"  style="position: absolute; top: 900px; left: 40px; height: 350px;">
+      
 
-      <pre style="position: absolute; left: 610px; top:920px; font-size: 25px;"> 
+      <pre  style="position: absolute; left: 590px; top:920px; font-size: 25px;"> 
         İnönü Üniversitesi
         Yazılım Mühendisliği 
         1.sınıf öğrencisi
         Emrecan ŞAHİN
       </pre>
     
-      <img src="img/yeniy.jpg"  style="position:absolute; left: 1005px; top: 880px;px; height: 350px;">
+      <img id="resim" class="m-4 rounded" src="img/yeniy.jpg"  style="position:absolute; left: 980px; top: 880px;px; height: 350px;">
     </div>
 
 
-    <div id="Hakkımda" font-size="25px">
-        </div>
+    
         
 
 
       <a name="Özgeçmiş"></a>
       <div id="Özgeçmiş" >
-          <img src="img/öz1.jpeg"style="height:500px; width:300px; margin-top: 100px;"  alt=""><p style="position: absolute; left: 350px;
+          <img class=" rounded" src="img/öz1.jpeg"style="height:500px; width:300px; margin-top: 100px;"  alt=""><p style="position: absolute; left: 350px;
           top:1750px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 20px;">
         9 ocak 2002 yılında şanlıurfada doğdum 5yıl şanlıurfada kaldıktan sonra hatay da oturmaya <br> başladık eğitimimin devamını 
         hatayda okudum sağlık lisesi mezunuyum hemşir olarak <br> mezun oldum ve eğitimimin  devamını yazılım mühendisliği ile 
         ilerliyorum şu anda.
         </p>
-        <img src="img/öz2.jpeg"  style="height:500px; width:300px; position: absolute; right: 50px; top: 1750px;"  alt="">
+        <img class=" rounded" src="img/öz2.jpeg"  style="height:450px; width:300px; position: absolute; right: 50px; top: 1750px;"  alt="">
           
           
       </div>
